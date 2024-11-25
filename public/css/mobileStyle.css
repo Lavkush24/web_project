@@ -1,0 +1,46 @@
+@media (max-width: 400px) {
+    /* navbar */
+    #logo {
+      margin-left: 3rem;
+    }
+    .search {
+      display: none;
+    }
+
+
+    /* index */
+    .toggle {
+      background-color: rgb(255, 56, 93,0.8);
+      height: 10rem;
+      width: 1rem;
+      text-align: start;
+      padding-left: 1rem;
+      margin-left: 12rem;
+      border-radius: 1rem;
+    }
+
+    #toggle-items {
+      display: contents;
+    }
+
+    #filters {
+        display:flex;
+        flex-direction: column;
+        overflow-x: auto; 
+        white-space: nowrap;
+        height: 8rem;
+    }
+
+    .nav-toggle {
+        background-color: white;
+        height: 4rem;
+        width: 50%;
+        position: absolute;
+        right: 0;
+        border-radius: 0.5rem;
+    }
+
+    .nav-toggle:hover {
+        background-color: white;
+    } 
+  }
