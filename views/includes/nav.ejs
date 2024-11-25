@@ -1,0 +1,37 @@
+
+<nav class="navbar navbar-expand-md bg-body-tertiary sticky-top">
+    <div class="container-fluid ms-5" >
+      <a class="navbar-brand" href="/listings">
+        <div id="logo">
+          <i class="fa-regular fa-compass"></i>
+          <p><b>WanderLust</b></p>
+        </div>  
+      </a>
+      <button 
+        class="navbar-toggler"
+        type="button" 
+        data-bs-toggle="collapse" 
+        data-bs-target="#navbarNavAltMarkup" 
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+          <form class="d-flex" role="search">
+            <input class="form-control me-2 search-input" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline search-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
+          </form>
+        </div>
+        <div class="navbar-nav ms-auto ">
+          <a class="nav-link " href="/listings/new">Wanderlust your home</a>
+          <% if(!currUser) { %>
+            <a class="nav-link active signInOut" href="/signup"><i class="fa-solid fa-right-to-bracket "></i></a>
+            <a class="nav-link signInOut" href="/login"><i class="fa-solid fa-user"></i></a>
+          <% } %> 
+          <% if(currUser) { %> 
+            <a class="nav-link signInOut" href="/logout"><i class="fa-solid fa-power-off"></i></a>
+          <% } %>
+        </div>
+      </div>
+    </div>
+  </nav>

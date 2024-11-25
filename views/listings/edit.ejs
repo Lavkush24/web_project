@@ -1,0 +1,52 @@
+<% layout("/layouts/boilerplate.ejs") -%> 
+    <div class="row">
+        <div class="col-7 offset-2">
+    <h2>Edit your listing details</h2>
+    <form action="/listings/<%= dataList._id %>?_method=PUT" method="POST" novalidate class="needs-validation" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" value="<%= dataList.title %>" name="listing[title]" class="form-control" required>
+        <div class="valid-feedback">Title Looks Good</div>
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <textarea name="listing[description]" class="form-control" required><%= dataList.description %></textarea>
+        <div class="invalid-feedback">Give a short description</div>
+        </div>
+        <div class="mb-3">
+            <label for="image" class="form-label">Current Image</label><br>
+            <img src=<%= orgUrl %>  class="card-img-top show_img" alt="listing_image">
+            <div class="mb-3">
+                <label for="image" class="form-label">
+                    Upload New Image:
+                    <input
+                    type="file"
+                    name="listing[image]"
+                    class="form-control"
+                    />
+                </label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="mb-3 col-md-4">
+                <label for="price" class="form-label">Price</label>
+                <input value="<%= dataList.price %>" name="listing[price]" class="form-control" required>
+                <div class="invalid-feedback">Price is not valid</div>
+            </div>
+            <div class="mb-3 col-md-8">
+                <label for="location" class="form-label">Location</label>
+                <input type="text" value="<%= dataList.location %>" name="listing[location]" class="form-control" required>
+                <div class="invalid-feedback">Provide Location*</div>
+            </div>
+        </div>
+        
+        <div class="mb-3">
+            <label for="country" class="form-label">Country</label>
+            <input type="text" value="<%= dataList.country %>" name="listing[country]" class="form-control" required>
+            <div class="invalid-feedback">Provide Country Name*</div>
+        </div>
+        <button class="btn btn-dark edit_btn">edit</button>
+        <br>
+    </form>
+</div>
+</div>
