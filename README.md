@@ -53,7 +53,7 @@ Feel free experimenting to learn contribution make some pull and merge request .
 
 # thank you !!
 
-### Develper        
+### Developer        
 [Lavkush Kushwaha](https://github.com/Lavkush24) 
 
 
