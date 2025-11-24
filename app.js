@@ -87,7 +87,10 @@ app.use((req,res,next) => {
 //when route is listing use this route
 app.use("/listings", listingRouters);
 app.use("/listings/:id/reviews", reviewRouters);
-app.use("/", userRouters);
+app.use("/user", userRouters);
+
+
+app.use("/",listingRouters);
 
 //if reqest come on a unknown route
 app.all("*",(req,res,next) => {

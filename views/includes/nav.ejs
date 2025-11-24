@@ -24,11 +24,11 @@
         <div class="navbar-nav ms-auto" >
           <a class="nav-link " href="/listings/new">Wanderlust your home</a>
           <% if(!currUser) { %>
-            <a class="nav-link active signInOut" href="/signup"><i class="fa-solid fa-right-to-bracket "></i> &nbsp &nbsp<b id="toggle-items">signup</b></a>
-            <a class="nav-link signInOut" href="/login"><i class="fa-solid fa-user"></i>&nbsp &nbsp <b id="toggle-items">login</b></a>
+            <a class="nav-link active signInOut" href="/user/signup"><i class="fa-solid fa-right-to-bracket "></i> &nbsp &nbsp<b id="toggle-items">signup</b></a>
+            <a class="nav-link signInOut" href="/user/login"><i class="fa-solid fa-user"></i>&nbsp &nbsp <b id="toggle-items">login</b></a>
           <% } %> 
           <% if(currUser) { %> 
-            <a class="nav-link signInOut" href="/logout"><i class="fa-solid fa-power-off"></i>&nbsp &nbsp <b id="toggle-items">logout</b></a>
+            <a class="nav-link signInOut" href="/user/logout"><i class="fa-solid fa-power-off"></i>&nbsp &nbsp <b id="toggle-items">logout</b></a>
           <% } %>
         </div>
       </div>
